@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: quick-note-application
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
