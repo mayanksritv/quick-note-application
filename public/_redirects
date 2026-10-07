@@ -1,0 +1,2 @@
+/notes https://YOUR-RENDER-APP.onrender.com/notes 200
+/notes/* https://YOUR-RENDER-APP.onrender.com/notes/:splat 200
