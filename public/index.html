@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Quick Note — a simple full-stack note-taking application." />
+  <title>Quick Note</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">FULL-STACK CRUD</p>
+        <h1>Quick Note</h1>
+        <p class="subtitle">Capture ideas, tasks and reminders in seconds.</p>
+      </div>
+      <div class="stats" aria-label="Note statistics">
+        <span id="noteCount">0 notes</span>
+      </div>
+    </header>
+
+    <section class="composer card">
+      <form id="noteForm">
+        <div class="field-row">
+          <label>
+            <span>Title</span>
+            <input id="title" name="title" type="text" maxlength="120" placeholder="e.g. Internship ideas" required />
+          </label>
+        </div>
+        <label>
+          <span>Note</span>
+          <textarea id="content" name="content" rows="5" maxlength="5000" placeholder="Write something worth remembering..." required></textarea>
+        </label>
+        <div class="composer-footer">
+          <p id="formStatus" class="status" role="status"></p>
+          <button class="primary-btn" type="submit">Add Note</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="notes-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR NOTES</p>
+          <h2>Recent notes</h2>
+        </div>
+        <button id="refreshBtn" class="ghost-btn" type="button">Refresh</button>
+      </div>
+      <div id="notesGrid" class="notes-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <template id="noteTemplate">
+    <article class="note-card card">
+      <div class="note-content">
+        <h3 class="note-title"></h3>
+        <p class="note-body"></p>
+      </div>
+      <div class="note-meta">
+        <time class="note-date"></time>
+        <button class="delete-btn" type="button">Delete</button>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
