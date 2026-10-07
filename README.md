@@ -2,6 +2,10 @@
 
 A single-page full-stack note-taking web application built for a CRUD/REST API assignment.
 
+## Live Demo
+
+[Open Quick Note Application](https://quick-note-application-9aji.onrender.com/)
+
 ## Tech Stack
 
 - **Backend:** Node.js + Express
